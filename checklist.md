@@ -1,20 +1,20 @@
 # DyslexAI Notebook Feature Checklist
 
 ## Typography & Visual Features
-- [ ] OpenDyslexic font implementation
-- [ ] Lexie Readable font implementation
-- [ ] Adjustable letter spacing
-- [ ] Adjustable line height
+- [x] OpenDyslexic font implementation
+- [x] Lexie Readable font implementation
+- [x] Adjustable letter spacing
+- [x] Adjustable line height
 - [ ] Adjustable character width
 - [ ] Customizable font weight
-- [ ] Customizable font size
+- [x] Customizable font size
 - [ ] Optional syllable highlighting
 - [ ] Customizable background colors
 - [ ] Preset color schemes for visual stress reduction
 - [ ] Adjustable text-background contrast
 - [ ] Optional reading ruler/guide
-- [ ] Dark mode
-- [ ] Reduced motion settings
+- [x] Dark mode
+- [x] Reduced motion settings
 
 ## Text-to-Speech Features
 - [ ] Real-time text reading
@@ -33,22 +33,22 @@
 - [ ] Word finding assistance
 
 ## Editor Core Features
-- [ ] Clean, distraction-free interface
-- [ ] Block-based editing (EditorJS)
+- [x] Clean, distraction-free interface
+- [x] Block-based editing (EditorJS)
 - [ ] Reading mode
-- [ ] Editing mode
+- [x] Editing mode
 - [ ] Seamless mode switching
 - [ ] Autosave functionality
 - [ ] Version history
 - [ ] Markdown shortcuts support
-- [ ] Distraction-free mode
+- [x] Distraction-free mode
 - [ ] Keyboard shortcuts
 
 ## Personalization
-- [ ] User preference saving
-- [ ] Cross-session preference persistence
-- [ ] Customizable accessibility features
-- [ ] Default settings presets
+- [x] User preference saving
+- [x] Cross-session preference persistence
+- [x] Customizable accessibility features
+- [x] Default settings presets
 
 ## Error Handling & Recovery
 - [ ] Forgiving input handling
@@ -58,11 +58,11 @@
 
 ## Technical Requirements
 - [ ] autosave
-- [ ] Input latency < 100ms
+- [x] Input latency < 100ms
 - [ ] Progressive loading for long documents
 - [ ] Low memory usage optimization
 - [ ] Client-side caching for AI responses
-- [ ] WCAG 2.1 AA compliance
+- [x] WCAG 2.1 AA compliance
 - [ ] Automated accessibility testing
 - [ ] Performance testing for low-end devices
 

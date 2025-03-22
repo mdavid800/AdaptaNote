@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('/fonts/OpenDyslexic-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('/fonts/OpenDyslexic-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lexie Readable';
+    src: url('/fonts/LexieReadable-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @layer base {
     :root {
         --background: 0 0% 100%;
@@ -74,4 +95,1175 @@
     body {
         @apply bg-background text-foreground;
     }
+}
+
+@layer components {
+    .editor-container {
+        @apply prose prose-lg max-w-none dark:prose-invert;
+    }
+
+    .editor-toolbar {
+        @apply sticky top-0 z-50 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-2;
+    }
+
+    .editor-content {
+        @apply p-4;
+    }
+}
+
+/* EditorJS Custom Styles */
+.codex-editor {
+    @apply font-sans;
+}
+
+.ce-block--selected .ce-block__content {
+    @apply bg-gray-100 dark:bg-gray-700;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply hover:bg-gray-100 dark:hover:bg-gray-700;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply bg-gray-100 dark:bg-gray-700;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply bg-gray-100 dark:bg-gray-700;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply bg-gray-200 dark:bg-gray-600;
+}
+
+.ce-toolbar__content {
+    @apply max-w-none;
+}
+
+.ce-block__content {
+    @apply max-w-none;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply text-gray-600 dark:text-gray-300;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply text-gray-900 dark:text-white;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply text-gray-900 dark:text-white;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply text-gray-900 dark:text-white;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply transition-colors duration-200;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply transition-colors duration-200;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply transition-colors duration-200;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply transition-colors duration-200;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply rounded-md;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply rounded-md;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply rounded-md;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply rounded-md;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply p-1;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply p-1;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply p-1;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply p-1;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply cursor-pointer;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply cursor-pointer;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply cursor-pointer;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply cursor-pointer;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-white dark:focus:ring-offset-gray-800;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-offset-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-primary;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:ring-2;
+}
+
+.ce-toolbar__plus,
+.ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus,
+.ce-block--selected .ce-toolbar__settings-btn {
+    @apply focus:outline-none;
+}
+
+.ce-toolbar__plus:hover,
+.ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
+}
+
+.ce-block--selected .ce-toolbar__plus:hover,
+.ce-block--selected .ce-toolbar__settings-btn:hover {
+    @apply focus:outline-none;
 }

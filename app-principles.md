@@ -1,8 +1,8 @@
-# DyslexAI Notebook: Core Principles
+# AdaptaNote: Core Principles
 
 ## Project Overview
 
-DyslexAI Notebook is a web-based writing application specifically designed to assist individuals with dyslexia. The application combines accessible design principles with modern AI capabilities to create a frictionless writing experience that reduces cognitive load and increases productivity for users with reading and writing differences.
+AdaptaNote is a web-based writing application specifically designed to assist individuals with dyslexia. The application combines accessible design principles with modern AI capabilities to create a frictionless writing experience that reduces cognitive load and increases productivity for users with reading and writing differences.
 
 ## Key Features
 
